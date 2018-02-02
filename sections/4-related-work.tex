@@ -4,8 +4,25 @@
 
 \note{NS: @João please provide your text about the related work.}
 
+\note{TODO: Adicionar intro e formatar as 3 areas de related work:
+- Blockchain & Smart Contracts
+  - Blockchain
+  - Public Infrastructure
+  - Trustless computing (Smart Contracts)
+- Identity Management & Certification
+  - Blockcerts
+  - Web of Trust (& RWOT)
+  - onename
+  - uport
+  - keybase
+- Distributed Applications Stack
+  - IPFS
+  - libp2p
+  - MetaMask
+  - Web Platform
+}
+
 \subsection{Overview of the Blockchain Technology}
-%\subsection{Trust Decentralisation Through Blockchain}
 \label{rel:bitcoin}
 
 \noindent In this section we present the emerging blockchain technology, which is a building block of both Blockcerts and Hypercerts, our proposed system. We start by providing a brief historical context of blockchain (Section~\ref{sec:hist}). Then, we discuss the main features of blockchain as it appeared firstly in the Bitcoin crypto-currency (Section~\ref{sec:tech_bitcoin}), and how it has been improved in alternative crypto-currency systems (Section~\ref{rel:alt-coins}). Lastly, we introduce two relevant systems of the blockchain ecosystem: Ethereum (Section~\ref{rel:ethereum}) and IPFS (Section~\ref{rel:ipfs}), both of which will be used to build our proposed non-siloed certification service.
@@ -74,12 +91,12 @@ A smart-contract has to define an upper limit of computing power it will use. Th
 
 Some of Ethereum's properties can be very useful to build a non-siloed certification service. As described in Section~\ref{revoked}, Blockcerts' current method for verifying if a certificate has been revoked depends on a third party in the sense that it relies on consulting a certificate revocation list which is owned and maintained by the issuer. Ethereum can be utilised to solve this problem. For every certificate, or batch of certificates issued, a smart-contract can be created that keeps track of those certificates' revocation status. The issuer and the receiver would have permissions to change the revocation status of certificates (Section~\ref{proposed:functionalities} details the rationale behind who can revoke certificates) and from there anyone who wanted to verify the revocation status of a given certificate would do so by checking the state of the corresponding smart-contract.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsubsection{The Inter Planetary File System}
+\subsubsection{IPFS, The InterPlanetary File-System}
 \label{rel:ipfs}
 
 Storing data on a blockchain is inefficient and expensive. IPFS is useful for a wide range of applications, one of them being blockchain. IPFS (Interplanetary File System)~\cite{Benet:2014vw} is a peer-to-peer distributed file system. The motivations behind its creation are a better use of bandwidth, the ability to permanently addressing content and moving the web towards a distributed architecture.
+
 As the web grows the amount of bandwidth required to make it work also increases and the HTTP %\footnote{Hypertext Transfer Protocol: https://tools.ietf.org/html/rfc2616}
 file transfer model that is widely used today does not optimise bandwidth usage. If 50 people in a classroom all download the same file from Dropbox at the same time, 50 independent requests are made to backbone of the Internet. By addressing that same file with IPFS nodes can download the file from other nodes that have the same file and if there is a node in your network who has the requested file you do not even need an Internet connection. This is a very important feature that can change the way applications work.
 
@@ -87,14 +104,14 @@ Rather than being addressed by their location (IP based link), IPFS files are ad
 
 IPFS is very efficient in the way it handles data. Each node only needs to store the blocks it is interested in and when a node is searching for a file it queries the network for nodes who have that file. Files are kept track of by using a Merkle DAG~\cite{Merkle:1987jk}, a binary tree where each node is created by hashing its two child nodes, that allows for reliable verification of integrity in large data sets. This is the same data structure behind Git, Bitcoin, and BitTorrent. IPFS is built on top of IPLD, a data format that works as an abstraction layer on top of all the data it represents, which allows for IPFS clients to access data transparently, regardless of the type. This allows for extreme flexibility in the way content is linked, allowing for instance an IPFS client to traverse into an Ethereum smart-contract and check the value of its variables -- in a string based link, just like a file path in a Unix based system -- without the need to run an Ethereum node. Next, we present Blockcerts in more detail.
 
-BlockStack~\cite{blockstack}.
+\subsubsection{Summary}
+\label{rel:ipfs}
 
-\subsection{Other Refs to Add}
-Lottery system using Bitcoin and Ethereum (ieee security symposium) \cite{Miller:2017cf}
+\note{TODO: one paragraph summary of the Related Work}
 
-Decentralized PKI using blockchain (ieee security symposium) \cite{Anonymous:umr1kkOC}
-
-HAWK: Privacy in smart-contracts using zero knowledge proofs \cite{Kosba:2016iq}
-
-
-
+\note{TODO: Refs to include:
+  - Lottery system using Bitcoin and Ethereum (ieee security symposium) \cite{Miller:2017cf}
+  - Decentralized PKI using blockchain (ieee security symposium) \cite{Anonymous:umr1kkOC}
+  - HAWK: Privacy in smart-contracts using zero knowledge proofs \cite{Kosba:2016iq}
+  - BlockStack~\cite{blockstack}.
+}
