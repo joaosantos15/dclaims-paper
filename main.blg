@@ -1,0 +1,71 @@
+This is BibTeX, Version 0.99d (TeX Live 2017)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: main.aux
+The style file: acm.bst
+Database file #1: main.bib
+I was expecting a `,' or a `}'---line 47 of file main.bib
+ :   
+ :   % https://www.societyofeditors.org/soe-news/19-september-2017/wikitribune-co-founder-to-address-soe-conference
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 76 of file main.bib
+ : 
+ : @inproceedings{linguistic,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 705 of file main.bib
+ : @article{Benet:2014vw
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 713 of file main.bib
+ : @inproceedings{Kosba:2016iq
+ :                            ,
+I'm skipping whatever remains of this entry
+Warning--to sort, need author or key in Anonymous:umr1kkOC
+Warning--empty author in Anonymous:umr1kkOC
+Warning--empty journal in Anonymous:umr1kkOC
+Warning--empty publisher in Dziembowski:2015gs
+Warning--empty year in semisupervised
+Warning--empty publisher in Merkle:1987jk
+You've used 37 entries,
+            2253 wiz_defined-function locations,
+            699 strings with 9437 characters,
+and the built_in function-call counts, 10395 in all, are:
+= -- 874
+> -- 600
+< -- 0
++ -- 246
+- -- 209
+* -- 714
+:= -- 1755
+add.period$ -- 108
+call.type$ -- 37
+change.case$ -- 209
+chr.to.int$ -- 0
+cite$ -- 43
+duplicate$ -- 433
+empty$ -- 887
+format.name$ -- 209
+if$ -- 2119
+int.to.chr$ -- 0
+int.to.str$ -- 37
+missing$ -- 30
+newline$ -- 183
+num.names$ -- 74
+pop$ -- 319
+preamble$ -- 1
+purify$ -- 176
+quote$ -- 0
+skip$ -- 232
+stack$ -- 0
+substring$ -- 220
+swap$ -- 76
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 148
+warning$ -- 6
+while$ -- 78
+width$ -- 39
+write$ -- 333
+(There were 4 error messages)
