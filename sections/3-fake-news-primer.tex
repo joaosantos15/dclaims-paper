@@ -1,11 +1,16 @@
 %!TEX root = ../main.tex
 
-\section{The Fake News Problem}
+\section{A primer on the Fake News problem}
 
 Users today when visiting a news outlet or a social network website are commonly confronted with the question as to whether what they are reading is true or false. In this paper, we seek to assist users in tackling this problem by providing a tool to help them spot fake news.
-\subsection{Current Methods to Spot Fake News}
 
-Traditional newspapers, reputable and reliable. but fake news have been appeared precisely on such press. This has contributed to the loss of reputation of some these companies.
+\subsection{News landscape analysis}
+
+Newspapers, magazines and prestigious news outlets have been a reliable news source for centuries. Readers trusted a selected few and the news outlets had an incentive to continue producing good quality information with the risk of loosing their readers to competition. 
+
+Times changed and today.. \note{TODO: present solid references on how the number of news outlets grew, how more fake news are generated and how people trust less and less what they read}
+
+\subsection{Methods used classify Fake News}
 
 \mypara{Content refereeing.} To try to address this problem, some content providers have decided to employ news filtering algorithms for identifying fake news and blocking then from their users. Facebook, Twitter. Facebook has just advertised a system to classify the news based on trustworthiness~\cite{fbrank}. Facebook will begin testing the effort next week by prioritizing news reports in its news feed from publications that users have rated in Facebook surveys as trustworthy. The most ``broadly trusted'' publications—those trusted and recognized by a large cross-section of Facebook users—would get a boost in the news feed, while those that users rate low on trust would be penalized. However, we incur the risks of censorship. Recently, Twitter has been accused of blocking content from right wing circles, and from religious groups. Similar accusation has been made in 2016 to Google, Facebook, and Twitter~\cite{accusedskew}.
 
@@ -15,8 +20,9 @@ Traditional newspapers, reputable and reliable. but fake news have been appeared
 
 %Centralized solution for someone who stores everything and validates that information for you. Problem of facebook, twitter being accused of bias.
 
-\subsection{New Approach: Distributed Verifiable Claims}
+\subsection{A novel approach: Distributed Verifiable Claims}
 
+\note{TODO: João, colocar imagens em papers não funciona como em blog posts. Tu colocas a imagem e tens de fazer referência no texto. Se fores ver a versão render do paper vais ver que a imagem não paarece aqui.}
 
 \begin{figure}[t]
   \centering
@@ -27,30 +33,16 @@ Traditional newspapers, reputable and reliable. but fake news have been appeared
   \label{fig:model}
 \end{figure}
 
-Verifiable Claims are a proposal by W3C. Our data model, Distributed Verifiable Claims are based on W3C's verifiable claims but with some differences.
+Verifiable Claims are a proposal by W3C. 
 
-\subsubsection{Verifiable Claims Data Model}
-Verifiable Claims are a data representation modal, proposed by the W3C Credentials Community Group \footnote{https://web.archive.org/web/20171013165205/https://www.w3.org/TR/verifiable-claims-data-model/} for describing achievements, qualities or other information.
+\note{TODO:
+  - Explicar o que são as Verifiable Claims e fazer ref ao RFC
+  - Explicar os shortcommings (json-ld schemas === não funciona offline)
+  - Explicar que continua a exigir uma autoridade para guardar as claims
+  - Introduzir então as Distributed Verifiable Claims que usam "bleeding edge" e novel approach das Blockchains e P2P para permitir que funcione tudo distribuido
+}
 
-An example would be a university digital diploma, singed by the university’s private key, that I can take to any employer and they can verify it. This diploma should continue to be verifiable even if the university ceases to exist.
-
-Actions supported by Verifiable Claims:
-\begin{itemize}
-    \item Issue
-    \item Share / retrieve
-    \item Verify
-    \item Revoke
-\end{itemize}
-
-
-What we want to do is to provide a platform that allows end users to have news items automatically reviewed by independent parties of their trust. News are understood as claims which are submitted to a review process. Figure~\ref{fig:model} shows how we envision it working. In our system there are three parties: providers, readers, and issuers. Providers are responsible for serving news content to the users on their browsers. Readers are nothing but the end users which visit providers' websites and browse through the news content. Issuers are responsible for reviewing certain news and issuing a certificate which will be associated to the news.
-
-The idea is that the readers are able to check if some news items is reliable or fake depending on the endorsement produced by some issuer. Readers should be able to designate which issuers they trust so that by the time they visit a given website, each news item is classified according to the review generated by the issuer.
-
-Note that it is not our goal to build a tool that can determine {\em per se} and automatically fake news. Our approach is instead to let readers establish trust relations with someone that they trust to provide them with reliable information. This can be, e.g., some original author, communities of experts, etc. Our system should allow issuers also to attach proofs of what they say is true. Put simply, we want to provide an instrument that can help news readers to mimic trust relations they have in the real world also in the virtual world.
-
-
-\subsection{Challenges}
+\subsection{Requirements}
 
 In order to build a system for fake news detection based on verifiable claims, several challenges need to be overcome:
 
@@ -63,5 +55,3 @@ In order to build a system for fake news detection based on verifiable claims, s
 \mypara{Source anonymity:} How to provide anonymity protection? Talk about privacy. 
 
 \mypara{Incentives} Talk about incentives that must be aligned. Talk about sustainability.
-
-
