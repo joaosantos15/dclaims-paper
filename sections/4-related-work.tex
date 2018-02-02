@@ -1,0 +1,100 @@
+%!TEX root = ../main.tex
+
+\section{Related Work}
+
+\note{NS: @João please provide your text about the related work.}
+
+\subsection{Overview of the Blockchain Technology}
+%\subsection{Trust Decentralisation Through Blockchain}
+\label{rel:bitcoin}
+
+\noindent In this section we present the emerging blockchain technology, which is a building block of both Blockcerts and Hypercerts, our proposed system. We start by providing a brief historical context of blockchain (Section~\ref{sec:hist}). Then, we discuss the main features of blockchain as it appeared firstly in the Bitcoin crypto-currency (Section~\ref{sec:tech_bitcoin}), and how it has been improved in alternative crypto-currency systems (Section~\ref{rel:alt-coins}). Lastly, we introduce two relevant systems of the blockchain ecosystem: Ethereum (Section~\ref{rel:ethereum}) and IPFS (Section~\ref{rel:ipfs}), both of which will be used to build our proposed non-siloed certification service.
+
+\subsubsection{Historical Context of Blockchain}
+\label{sec:hist}
+
+Blockchain technology was made popular with the creation of Bitcoin \cite{Anonymous:JOJGrvgg}, in 2009. Since the 1980s that there had been proposals for crypto-currency systems and in 2005 for decentralised consensus protocols. The proposed crypto-currency systems were never widely adopted due to the need of a centralised platform, as for the decentralised consensus protocols, they never became a reality as it was unclear how to carry out the implementation. Bitcoin's white paper,\cite{Anonymous:JOJGrvgg}, was published in 2009 by Satoshi Nakamoto (a pseudonym) and it was the first successful implementation of a decentralised crypto-currency system.
+
+Bitcoin was the first truly decentralised crypto-currency, it uses cryptographic properties to solve the double-spending problem \footnote{\url{https://en.bitcoin.it/wiki/Double-spending}} and allows for parties to engage in transactions without having to trust each other. In the backbone of Bitcoin lies a blockchain, which is a distributed ledger that keeps track of every valid transaction that ever took place in the network. Transactions are validated and packed into blocks that are then added to the ledger by nodes (miners) that run a consensus protocol, proof-of-work in the case of Bitcoin. Bitcoin's blockchain has full auditability, meaning that any node can verify the validity of any transaction and correctness, meaning that all the transactions on the longer chain are valid.
+
+The introduction of a blockchain in the Bitcoin design constituted a true technical breakthrough. Although the blockchain concept is mostly associated with Bitcoin, since it played a pivotal role in the large scale adoption of blockchain technology, it has been applied to multiple uses, which range from Internet of Things applications~\cite{Christidis:2016bn}, to new Byzantine Fault Tolerant protocols~\cite{Miller:2016wo}, to alternative crypto-currency systems. With this regard, Bonneau et al.~\cite{Bonneau:2015ema} offer a technical overview on Bitcoin's architecture and protocol, and Barber et al.~\cite{Barber:2012va} identify possible security vulnerabilities and solutions.
+
+%The introduced by Bitcoin was the implementation of a blockchain, a distributed ledger that keeps track of transactions.
+
+%overview of how a blockchain works by using Bitcoin as an example.
+
+%We chose to use Bitcoin as an example because to date, it is the most widespread and tested blockchain and because
+
+\subsubsection{Technical Overview of the Bitcoin's Blockchain}
+\label{sec:tech_bitcoin}
+
+Bitcoin proposed an alternative mode of establishing trust between transacting parties. On traditional financial transaction systems, such as banks, two transacting entities have trust on a centralised element, the bank. Let us look at the example of a normal wire-transfer. User A sends money to user B. Both A and B are confident that the bank will withdraw the right amount of money from A's account and place that same amount in B's account. In this traditional trust model the bank is an essential entity in the process as it constitutes the only source of trust between the two transacting parties. Bitcoin's approach is different. Instead of asking the two parties to trust each other, it uses a proof-of-work system whose cryptographic properties assure transactional correctness as long as honest nodes control the majority of the CPU power of the network.
+
+An electronic currency is nothing more than a piece of digital data and one of the features of digital data is their easy replication. For that reason, an issue that an electronic currency has to tackle is the double spending problem. That is, ensuring that a given node is not able to spend the same token (coin) more than once. The way to solve this problem without resorting to a centralised system is to create a ledger of transactions and get all the nodes to agree on the content of that ledger. To that end, a consensus protocol is used, the Bitcoin consensus protocol, also known as the Nakamoto Consensus if based on a proof-of-work.
+
+% \label{rel:bitcoin_proof}
+\paragraph{Transactions and proof-of-work:} A Bitcoin transaction consists on nodes exchanging unspent coins and is identified by chain of digital signatures. To complete a transaction the sending node digitally a hash that identifies the past transaction and the public key of the next owner. This ensures that each transaction is linked to the ones preceding it, creating a chain.
+The next key challenge is getting all the nodes to agree on the set of past transactions, in order to prevent double-spending.
+To that end transactions are packed into blocks, and added to an append-only data structure, the blockchain. Each transaction is linked to the one before it and is signed by the owner of the UTXOs used as input in that transaction.
+
+\paragraph{The mining process:} To add a block to the blockchain, nodes have to mine the block and the way to do that is to solve a mathematical challenge with a pre-defined difficulty level, this is called a proof-of-work~\cite{Gervais:2016dd}. The first node to solve that challenge mines the block, permanently adding it to the Blockchain. Each time a node mines a block, a new Bitcoin (coin) is created and given to that node. This constitutes an incentive for nodes to mine. The algorithm is designed to automatically adjust the challenger's difficulty in order to regulate the currency issuing rate. All the mined blocks are made of transactions that are linked to each other, which means that if a dishonest node was to change a past transaction that change would be eventually be detected by an honest node.
+
+Sometimes a node will mine a block that has already been mined by another node but due to network latency the first is unaware of this. In this situation a fork occurs. Both of these blocks are propagated through the network and eventually a new block will be mined and appended to one of those forks. The network will choose the longest fork as the standing one and the blocks on the branch that is not chosen are discarded. Those blocks are called stale blocks. The probability of the occurrence of a fork of depth $n$ is $O(2^{-n})$ which gives miners a high degree of confidence that the transactions they process will eventually be included in the ledger.
+
+\paragraph{Bitcoin's consensus protocol:} Bonneau et al.~\cite{Bonneau:2015ema} provide an overview of Bitcoin's consensus protocol stability features. It ensures consensus, eventually all correct nodes will agree upon the set of blocks that exist on the blockchain, it has exponential convergence, giving confidence to miners that the blocks they mine will be eventually be added to the blockchain, it has liveness as new blocks will continue to be added, motivating miners by enabling them to collect fees, it has correctness since the longest chain (the active one) will not include stale blocks and it has fairness in the sense that the probability of a miner mine the next block is directly proportional to the amount of computing power that miner has.
+
+
+\subsubsection{After Bitcoin: Alt-coins and Other Consensus Protocols}
+\label{rel:alt-coins}
+
+Following Bitcoin's success, a large and active community has emerged and worked on modifications and extensions to the original protocol to improve some of Bitcoin's shortcomings like performance, introduce new consensus protocols, add new features and even new banking systems~\cite{Danezis:2015ha}. These modifications and extensions, which are usually forks of Bitcoin or abstractions that sit on top of existing blockchains, are called ''alt-coins''~\cite{Bonneau:2015ema}. This section provides an overview of systems that emerged since Bitcoin's inception.
+
+\paragraph{Evening out the distribution of mining power:} One of the criticisms of Bitcoin's proof-of-work mechanism is that is motivates an uneven distribution of mining power. This happens because the time it takes to solve the computational challenge can be decreased by using more CPU cores concurrently. To address this problem, Litecoin\footnote{\url{https://litecoin.org}} introduces a proof-of-work mechanism that is not solved faster by adding CPU cores. Ethereum also tackles this issue (see Section \ref{rel:ethereum}). Other systems propose completely different consensus mechanisms such as proof-of-space~\cite{Dziembowski:2015gs} where nodes are rewarded by storing data, rather than performing computations; this is the case with Permacoin~\cite{Miller:2014kb} and~FileCoin\footnote{\url{https://filecoin.io}} crypto-currency whose goal is to leverage the blockchain to store data. Blockstack~\cite{Ali:2016vq} uses the Bitcoin blockchain to provide a global naming service (like DNS). Peercoin~\cite{King:2012ur} proposes a Proof-of-Stake mechanism where nodes' stake in the network is calculated based on the age of the coins they own and is based on the premise that a node will act in its own best interest, so if has a high stake in the network he will be well behaved and thus contribute to a good operation of the network. DDOS-Coin~\cite{Wustrow:2016tda} proposes a malicious consensus mechanism, proof-of-denial of service, where nodes are rewarded by proving they participated in a DDOS attack. Another consensus mechanism include proof-of-bandwidth~\cite{Ghosh:2014wo}, proof-of-luck~\cite{Milutinovic:2016gs}. Some crypto-currencies proposals have focused on improving Bitcoin's transaction rates and scalability, which is the case of Bitcoin-NG~\cite{Luu:2016cl,Eyal:2016vn}, and others, such as ZCash~\cite{Anonymous:zwRGR7mQ} and HAWK~\cite{Kosba:2016iq}, have focused on transactional privacy~\cite{BenSasson:2015in}.
+
+\paragraph{Enabling contract customisation:} One of the shortcomings of Bitcoin was the lack of contract customisation, as while it did allow for parties to create some rules regarding a given transaction (such as requiring a third party to approve the transaction), doing so required learning a not very intuitive scripting language and the functionality was extremely limited. In particular, it only allowed for a very simple form of smart contracts; smart-contracts are programs that run on the blockchain and allow for the creation of special transaction rules. Ethereum~\cite{Wood:2014ur,Buterin:2013ux} is a crypto-currency blockchain, similar to Bitcoin in many ways, that consists of a smart contract and decentralised application platform. It has a Turing complete programming language which allows for users to create distributed applications while making use of the features of the blockchain.
+
+\subsubsection{Ethereum and Smart-Contracts}
+\label{rel:ethereum}
+
+\noindent The alt-coins introduced in the section above aim at solving some of Bitcoin's shortcomings such as scalability and lack of functionality. However, they are highly optimised for one use case and lack flexibility to serve other purposes. Ethereum aims at solving this limitation by offering smart-contracts. A smart-contract is a script that runs in the blockchain. It has Turing completeness, thus effectively offering a state-machine that runs on the blockchain.
+
+Regarding its architecture, Ethereum~\cite{Wood:2014ur,Buterin:2013ux} is built on many of the same principles as Bitcoin. It is a blockchain based system that can also serve as a crypto-currency. It also uses a proof-of-work mechanism as consensus protocol, albeit with a difference, while Bitcoin's consensus protocol challenge lies on CPU power, Ethereum's lies on memory requirement. The goal of this different implementation is to make the network more democratic. One of the consequences of Bitcoin's consensus protocol was the creation of mining farms, i.e., infrastructures provided with Bitcoin mining specialised hardware, which resulted on an uneven distribution of the mining power among active nodes. Memory is something that is extremely optimised on pretty much every electronic device nowadays, much more than CPU power, so this measure should empower lighter miners to the detriment of more powerful ones.
+
+Ethereum provides an API for developers to apply arbitrary logic to smart-contracts. Its transactions can be of one of two types.
+
+\begin{itemize}
+\item \textbf{Private}: Are controlled by an Elliptic Curve Cryptography (ECC) private key and allow for currency transaction.
+\item \textbf{Smart-contract}: These are transactions controlled by the logic programmed into a smart contract.
+\end{itemize}
+
+Both types of transactions can interact with one another (a private transaction can interact with a smart contract and the latter can also engage with a private transaction).
+From a programming stand point, one can look at smart-contracts as objects in the Ethereum universe, these objects can interact with each other to fulfil any business rules required by an application.
+
+A smart-contract has to define an upper limit of computing power it will use. This limit of computing power is knows as Gas. The amount of Gas a program has is what defines for how long it can be ran by Ethereum nodes. Gas costs money and miners are rewarded with that Gas. This condition is extremely important to stop programs that halted and malicious programs designed to enter an infinite loop. If a program runs and terminates successfully and does not spend all the Gas, the remainder is returned to the smart-contract, and can be used in future executions. On the other hand if a smart-contract runs out of Gas before ending its execution, all the changes made by the smart-contract are rolled back (to prevent inconsistent states) but the Gas is not returned to the smart-contract, it is given to the miners.
+
+Some of Ethereum's properties can be very useful to build a non-siloed certification service. As described in Section~\ref{revoked}, Blockcerts' current method for verifying if a certificate has been revoked depends on a third party in the sense that it relies on consulting a certificate revocation list which is owned and maintained by the issuer. Ethereum can be utilised to solve this problem. For every certificate, or batch of certificates issued, a smart-contract can be created that keeps track of those certificates' revocation status. The issuer and the receiver would have permissions to change the revocation status of certificates (Section~\ref{proposed:functionalities} details the rationale behind who can revoke certificates) and from there anyone who wanted to verify the revocation status of a given certificate would do so by checking the state of the corresponding smart-contract.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsubsection{The Inter Planetary File System}
+\label{rel:ipfs}
+
+Storing data on a blockchain is inefficient and expensive. IPFS is useful for a wide range of applications, one of them being blockchain. IPFS (Interplanetary File System)~\cite{Benet:2014vw} is a peer-to-peer distributed file system. The motivations behind its creation are a better use of bandwidth, the ability to permanently addressing content and moving the web towards a distributed architecture.
+As the web grows the amount of bandwidth required to make it work also increases and the HTTP %\footnote{Hypertext Transfer Protocol: https://tools.ietf.org/html/rfc2616}
+file transfer model that is widely used today does not optimise bandwidth usage. If 50 people in a classroom all download the same file from Dropbox at the same time, 50 independent requests are made to backbone of the Internet. By addressing that same file with IPFS nodes can download the file from other nodes that have the same file and if there is a node in your network who has the requested file you do not even need an Internet connection. This is a very important feature that can change the way applications work.
+
+Rather than being addressed by their location (IP based link), IPFS files are addressed by their content in the form of a self describing cryptographic hash (a multihash\footnote{\url{https://github.com/multiformats/multihash}}) that is immutable and permanent. This is a desirable feature for Hypercerts as it removes the dependency on an issuer to maintain a link to a file. Thus, to address the storage limitation of blockchains, a user can store large amounts of data on IPFS and reference that data in blockchain transactions, by using the multihash.
+
+IPFS is very efficient in the way it handles data. Each node only needs to store the blocks it is interested in and when a node is searching for a file it queries the network for nodes who have that file. Files are kept track of by using a Merkle DAG~\cite{Merkle:1987jk}, a binary tree where each node is created by hashing its two child nodes, that allows for reliable verification of integrity in large data sets. This is the same data structure behind Git, Bitcoin, and BitTorrent. IPFS is built on top of IPLD, a data format that works as an abstraction layer on top of all the data it represents, which allows for IPFS clients to access data transparently, regardless of the type. This allows for extreme flexibility in the way content is linked, allowing for instance an IPFS client to traverse into an Ethereum smart-contract and check the value of its variables -- in a string based link, just like a file path in a Unix based system -- without the need to run an Ethereum node. Next, we present Blockcerts in more detail.
+
+BlockStack~\cite{blockstack}.
+
+\subsection{Other Refs to Add}
+Lottery system using Bitcoin and Ethereum (ieee security symposium) \cite{Miller:2017cf}
+
+Decentralized PKI using blockchain (ieee security symposium) \cite{Anonymous:umr1kkOC}
+
+HAWK: Privacy in smart-contracts using zero knowledge proofs \cite{Kosba:2016iq}
+
+
+
