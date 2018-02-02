@@ -55,8 +55,10 @@ Someone could still attack IPFS and Ethereum.
 \subsection{Compatibility}
 Explain how easy it is to make work on any news-website.
 
-\section{Organize all the stuff below}
-\subsubsection{Publishers}
+
+\note{Organize all the stuff below}
+
+\subsection{Publishers}
 Entities that work as proxies to between issuers and the ethereum network.
 Publishers receiver batch claims for a certain news article. When a publisher has receiver X (x being a treshold that can be defined by each publisher)
 The single claims are batched into one larger claim, a batch, which is added to IPFS and issued in Ethereum as one transaction, which drops the price. Price of issuing one single claim = price of issuing a batch (which can have any number of single claims).
@@ -67,7 +69,7 @@ Publishers can then chose if they want to carry the cost of issuing to the issue
     \item A more dramatic, but possibly more effective approach would be to have publishers placing money in a smart-contract, as escrow. That smart-contract could receive “complaints” from issuers, which would contain the receipt sent by the publisher to that issuer. The smart-contract could then query the other smart contract (where the claim was supposed to be issued) and check if it had indeed been issued or not. If the smart-contract determined that the issue misbehaved, the value (or part of) the publisher had placed in escrow would be transfered to the complainant issuer. If batches are issued as a merkle tree, the merkle root would be the ipfs link and there is a great optimization that can be done here.
 \end{enumerate}
 
-\subsubsection{Curators}
+\subsection{Curators}
 Entities that take existing claims and generate new ones, based on the original ones.
 Eg. "A Curator finds 100 claims about news article A. He would then issue a new claim saying something like ‘40% of claims classify this article as having a misleading title’ "
 This would be useful for the end consumer, who could chose to subscribe to Curators rather than to individual issuers (Looking at a police report vs interviewing all the people involved in an event).
@@ -115,13 +117,4 @@ DClaims than returns the transaction ID in case the user wants to check the tran
 
 \paragraph{Getting a claim}
 tbd
-
-
-{\footnotesize \bibliographystyle{acm}
-\bibliography{main}}
-
-
-\end{document}
-
-
 

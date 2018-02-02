@@ -1,0 +1,204 @@
+\begin{thebibliography}{10}
+
+\bibitem{Anonymous:umr1kkOC}
+{IKP: Turning a PKI Around with Decentralized Automated Incentives}.
+\newblock 1--17.
+
+\bibitem{Ali:2016vq}
+{\sc Ali, M., Nelson, J., Shea, R., and Freedman, M.~J.}
+\newblock {Blockstack: A global naming and storage system secured by
+  blockchains}.
+\newblock {\em 2016 USENIX Annual Technical\/} (2016).
+
+\bibitem{blockstack}
+{\sc Ali, M., Nelson, J., Shea, R., and Freedman, M.~J.}
+\newblock Blockstack: A global naming and storage system secured by
+  blockchains.
+\newblock In {\em Proc of USENIX ATC\/} (2016).
+
+\bibitem{Barber:2012va}
+{\sc Barber, S., Boyen, X., Shi, E., and Uzun, E.}
+\newblock {Bitter to Better - How to Make Bitcoin a Better Currency.}
+\newblock {\em Financial Cryptography\/} (2012).
+
+\bibitem{BenSasson:2015in}
+{\sc Ben-Sasson, E., Chiesa, A., Green, M., Tromer, E., and Virza, M.}
+\newblock {Secure Sampling of Public Parameters for Succinct Zero Knowledge
+  Proofs}.
+\newblock In {\em 2015 IEEE Symposium on Security and Privacy (SP)\/} (2015).
+
+\bibitem{Benet:2014vw}
+{\sc Benet, J.}
+\newblock {IPFS-content addressed, versioned, P2P file system}.
+\newblock {\em arXiv.org\/} (2014).
+
+\bibitem{Bonneau:2015ema}
+{\sc Bonneau, J., Miller, A., Clark, J., Narayanan, A., Kroll, J.~A., and
+  Felten, E.~W.}
+\newblock {SoK: Research Perspectives and Challenges for Bitcoin and
+  Cryptocurrencies}.
+\newblock In {\em 2015 IEEE Symposium on Security and Privacy (SP)\/} (2015).
+
+\bibitem{Anonymous:zwRGR7mQ}
+{\sc Bowe, S., and et~al.}
+\newblock {Zcash Protocol Specification}.
+\newblock {\em self-published paper\/} (2017).
+
+\bibitem{Buterin:2013ux}
+{\sc Buterin, V.}
+\newblock {Ethereum white paper}.
+\newblock {\em self-published paper\/} (2013).
+
+\bibitem{Christidis:2016bn}
+{\sc Christidis, K., and Devetsikiotis, M.}
+\newblock {Blockchains and Smart Contracts for the Internet of Things}.
+\newblock {\em IEEE Access\/} (2016).
+
+\bibitem{Danezis:2015ha}
+{\sc Danezis, G., and Meiklejohn, S.}
+\newblock {Centrally Banked Cryptocurrencies}.
+\newblock In {\em Network and Distributed System Security Symposium\/} (2015).
+
+\bibitem{Dziembowski:2015gs}
+{\sc Dziembowski, S., Faust, S., Kolmogorov, V., and Pietrzak, K.}
+\newblock {Proofs of Space}.
+\newblock In {\em Advances in Cryptology -- CRYPTO 2015}. 2015.
+
+\bibitem{Eyal:2016vn}
+{\sc Eyal, I., Gencer, A.~E., Sirer, E.~G., and van Renesse, R.}
+\newblock {Bitcoin-NG - A Scalable Blockchain Protocol.}
+\newblock {\em NSDI\/} (2016).
+
+\bibitem{factchecker}
+{\sc {FactChecker}}.
+\newblock \url{http://factchecker.org}.
+
+\bibitem{stylometric}
+{\sc Feng, S., Banerjee, R., and Choi, Y.}
+\newblock {Syntactic Stylometry for Deception Detection}.
+\newblock In {\em Proc. of ACL\/} (2012).
+
+\bibitem{Gervais:2016dd}
+{\sc Gervais, A., Karame, G.~O., W{\"u}st, K., Glykantzis, V., Ritzdorf, H.,
+  and Capkun, S.}
+\newblock {On the Security and Performance of Proof of Work Blockchains}.
+\newblock In {\em the 2016 ACM SIGSAC Conference\/} (2016).
+
+\bibitem{Ghosh:2014wo}
+{\sc Ghosh, M., Richardson, M., Ford, B., and Jansen, R.}
+\newblock {A TorPath to TorCoin: Proof-of-Bandwidth Altcoins for Compensating
+  Relays}.
+\newblock {\em Yale University\/} (2014).
+
+\bibitem{semisupervised}
+{\sc Hai, Z., Zhao, P., Cheng, P., Yang, P., Li, X., and Li, G.}
+\newblock {Deceptive Review Spam Detection via Exploiting Task Relatedness and
+  Unlabeled Data}.
+\newblock In {\em Proc. of EMNLP, year = {2016},}.
+
+\bibitem{King:2012ur}
+{\sc King, S., and Nadal, S.}
+\newblock {Ppcoin: Peer-to-peer crypto-currency with proof-of-stake}.
+\newblock {\em self-published paper\/} (2012).
+
+\bibitem{Kosba:2016iq}
+{\sc Kosba, A., Miller, A., Shi, E., Wen, Z., and Papamanthou, C.}
+\newblock {Hawk: The Blockchain Model of Cryptography and Privacy-Preserving
+  Smart Contracts}.
+\newblock In {\em 2016 IEEE Symposium on Security and Privacy (SP)\/} (2016).
+
+\bibitem{Luu:2016cl}
+{\sc Luu, L., Narayanan, V., Zheng, C., Baweja, K., Gilbert, S., and Saxena,
+  P.}
+\newblock {A Secure Sharding Protocol For Open Blockchains.}
+\newblock {\em ACM Conference on Computer and Communications Security\/}
+  (2016).
+
+\bibitem{Merkle:1987jk}
+{\sc Merkle, R.~C.}
+\newblock {A Digital Signature Based on a Conventional Encryption Function}.
+\newblock In {\em Advances in Cryptology {\textemdash} CRYPTO
+  {\textquoteright}87}. 1987.
+
+\bibitem{Miller:2016wo}
+{\sc Miller, A., 0005, Y.~X., Croman, K., Shi, E., and Song, D.}
+\newblock {The Honey Badger of BFT Protocols.}
+\newblock {\em ACM Conference on Computer and Communications Security\/}
+  (2016).
+
+\bibitem{Miller:2017cf}
+{\sc Miller, A., and Bentov, I.}
+\newblock {Zero-Collateral Lotteries in Bitcoin and Ethereum}.
+\newblock In {\em 2017 IEEE European Symposium on Security and Privacy
+  Workshops (EuroS{\&}PW)\/} (2017), IEEE, pp.~4--13.
+
+\bibitem{Miller:2014kb}
+{\sc Miller, A., Juels, A., Shi, E., Parno, B., and Katz, J.}
+\newblock {Permacoin: Repurposing Bitcoin Work for Data Preservation}.
+\newblock In {\em 2014 IEEE Symposium on Security and Privacy (SP)\/} (2014).
+
+\bibitem{Milutinovic:2016gs}
+{\sc Milutinovic, M., He, W., Wu, H., and Kanwal, M.}
+\newblock {Proof of Luck}.
+\newblock In {\em the 1st Workshop\/} (2016).
+
+\bibitem{Anonymous:JOJGrvgg}
+{\sc Nakamoto, S.}
+\newblock {Bitcoin: A Peer-to-Peer Electronic Cash System}.
+\newblock {\em self-published paper\/} (2009).
+
+\bibitem{politifact}
+{\sc {PolitiFact}}.
+\newblock \url{http://www.politifact.com}.
+
+\bibitem{linguistic}
+{\sc Pérez-Rosas, V., and Mihalcea, R.}
+\newblock Experiments in open domain deception detection.
+\newblock In {\em Proc. of EMNLP\/} (2015), L.~Màrquez, C.~Callison-Burch,
+  J.~Su, D.~Pighin, and Y.~Marton, Eds.
+
+\bibitem{risefackchecking}
+{\sc {Reuters Institute}}.
+\newblock {The Rising of Fact-Checking Sites in Europe}, 2016.
+\newblock
+  \url{https://reutersinstitute.politics.ox.ac.uk/our-research/rise-fact-checking-sites-europe}.
+
+\bibitem{snopes}
+{\sc {Snopes}}.
+\newblock \url{https://www.snopes.com}.
+
+\bibitem{accusedskew}
+{\sc {The Stream}}.
+\newblock {How Google, Facebook and Twitter Skew Internet News Against
+  Conservatives}, 2016.
+\newblock
+  \url{https://stream.org/how-google-facebook-twitter-skew-internet-news-conservatives/}.
+
+\bibitem{fbrank}
+{\sc {The Wall Street Journal}}.
+\newblock {Facebook to Rank News Sources by Quality to Battle Misinformation},
+  2018.
+\newblock
+  \url{https://www.wsj.com/articles/facebook-to-rank-news-sources-by-quality-to-battle-misinformation-1516394184?mod=e2tw}.
+
+\bibitem{liar}
+{\sc Wang, W.~Y.}
+\newblock ``liar, liar pants on fire'': A new benchmark dataset for fake news
+  detection.
+\newblock In {\em Proc. of ACL\/} (2017).
+
+\bibitem{wikitribune}
+{\sc {WikiTribune}}.
+\newblock \url{https://www.wikitribune.com}.
+
+\bibitem{Wood:2014ur}
+{\sc Wood, G.}
+\newblock {Ethereum Yellow Paper}.
+\newblock {\em self-published paper\/} (2014).
+
+\bibitem{Wustrow:2016tda}
+{\sc Wustrow, E., and VanderSloot, B.}
+\newblock {DDoSCoin: cryptocurrency with a malicious proof-of-work}.
+\newblock {\em of the 10th USENIX Conference on\/} (2016).
+
+\end{thebibliography}
