@@ -59,6 +59,7 @@ Explain how easy it is to make work on any news-website.
 \note{Organize all the stuff below}
 
 \subsection{Publishers}
+\label{sec-publishers}
 Entities that work as proxies to between issuers and the ethereum network.
 Publishers receiver batch claims for a certain news article. When a publisher has receiver X (x being a treshold that can be defined by each publisher)
 The single claims are batched into one larger claim, a batch, which is added to IPFS and issued in Ethereum as one transaction, which drops the price. Price of issuing one single claim = price of issuing a batch (which can have any number of single claims).
@@ -70,6 +71,7 @@ Publishers can then chose if they want to carry the cost of issuing to the issue
 \end{enumerate}
 
 \subsection{Curators}
+\label{sec-curators}
 Entities that take existing claims and generate new ones, based on the original ones.
 Eg. "A Curator finds 100 claims about news article A. He would then issue a new claim saying something like ‘40% of claims classify this article as having a misleading title’ "
 This would be useful for the end consumer, who could chose to subscribe to Curators rather than to individual issuers (Looking at a police report vs interviewing all the people involved in an event).
@@ -87,6 +89,7 @@ Curators could also create claims about articles that are similar to others.
 \end{figure}
 
 \subsection{DClaims Web Extension}
+\label{sec-web-extension}
 The DClaims web extension creates a user interface on any news website that enables users to use the platform.
 In its current form the DClaims web extension uses jQuery and Bootstrap for the user interface, Metamask and the Web3 library to communicate with Ethereum and the JS-IPFS-API to communicate with the IPFS daemon.
 The DClaims web extension can be adapted to work on any news website with minimal configuration. As we will see in this section, DClaims starts by identifying the news website the user is on and then proceeds to learn if the user is in the website’s homepage or on a full article page.
@@ -102,6 +105,7 @@ In a full article page, DClaims allows users to generate Claims about that artic
 
 
 \subsection{DClaims Core component}
+\label{sec-core}
 
 The DClaims core component handles communication with IPFS and Ethereum and it can run both on a Javascript (browser) or Node.js environment. It can be seen as the backend of the system, even though the concept of backed does not really apply here since we are dealing with a decentralized system.
  It connect to Ethereum using the Web3 object injected by Metamask, in the case of the browser extension, or it can connect directly to a Go-Ethereum (Geth) node, via the RPC.
